@@ -14,46 +14,33 @@ const config: Config = {
       },
       white: "#FFFFFF",
     },
-    fontSize: {
-      "preset-1": "var(--preset-1)",
-      "preset-2": "var(--preset-2)",
-      "preset-3": "var(--preset-3)",
-      "preset-4": "var(--preset-4)",
-      "preset-5": [
-        "var(--preset-5)",
-        {
-          letterSpacing: "var(--letter-spacing-preset-5)",
-        },
-      ],
-      "preset-6": [
-        "var(--preset-6)",
-        { letterSpacing: "var(--letter-spacing-preset-6)" },
-      ],
-      "preset-7": [
-        "var(--preset-7)",
-        {
-          letterSpacing: "var(--letter-spacing-preset-7)",
-        },
-      ],
-      "preset-8": [
-        "var(--preset-8)",
-        {
-          letterSpacing: "var(--letter-spacing-preset-8)",
-        },
-      ],
-      "preset-8-bold": [
-        "var(--preset-8)",
-        {
-          fontWeight: 700,
-          letterSpacing: "2.7px",
-        },
-      ],
-      "preset-9": [
-        "var(--preset-9)",
-        {
-          lineHeight: "180%",
-        },
-      ],
+
+    backgroundImage: {
+      home: "url(/assets/home/background-home-mobile.jpg)",
+      "home-tablet": "url(/assets/home/background-home-tablet.jpg)",
+      "home-desktop": "url(/assets/home/background-home-desktop.jpg)",
+
+      crew: "url(/assets/crew/background-crew-mobile.jpg)",
+      "crew-tablet": "url(/assets/crew/background-crew-tablet.jpg)",
+      "crew-desktop": "url(/assets/crew/background-crew-desktop.jpg)",
+
+      destination: "url(/assets/destination/background-destination-mobile.jpg)",
+      "destination-tablet":
+        "url(/assets/destination/background-destination-tablet.jpg)",
+      "destination-desktop":
+        "url(/assets/destination/background-destination-desktop.jpg)",
+
+      technology: "url(/assets/technology/background-technology-mobile.jpg)",
+      "technology-tablet":
+        "url(/assets/technology/background-technology-tablet.jpg)",
+      "technology-desktop":
+        "url(/assets/technology/background-technology-desktop.jpg)",
+    },
+
+    extend: {
+      screens: {
+        "2xl": "1440px",
+      },
     },
   },
   plugins: [],

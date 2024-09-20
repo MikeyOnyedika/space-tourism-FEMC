@@ -3,9 +3,9 @@ import { ReactNode } from "react";
 
 export default function OtherPageLayout({ children }: { children: ReactNode }) {
   return (
-    <section>
+    <section className="w-full h-full p-6 flex flex-col gap-6">
       <Header />
-      <div>{children}</div>
+      {children}
     </section>
   )
 }
