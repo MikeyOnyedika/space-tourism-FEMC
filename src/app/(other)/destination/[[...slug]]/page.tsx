@@ -29,7 +29,6 @@ export default function Destination({
 }) {
   const destination = findDestination(params);
   if (destination === false) {
-    console.log("redirect called");
     redirect("/destination");
   }
 

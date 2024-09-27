@@ -2,20 +2,21 @@ import { crew } from "@/app/data";
 import Image from "next/image";
 import Nav from "../components/Nav";
 import { redirect } from "next/navigation";
+import { bellefair } from "@/app/font";
 
 function findCrew(
   params: Record<string, string>
 ): (typeof crew)[0] | false {
   const slug = params.slug;
 
-  if (!slug || slug[0] === "moon") {
+  if (!slug || slug[0] === "commander") {
     return crew.find((member) => member.slug === "commander")!;
-  } else if (slug[0] === "mars") {
+  } else if (slug[0] === "mission-specialist") {
     return crew.find((member) => member.slug === "mission-specialist")!;
-  } else if (slug[0] === "europa") {
-    return crew.find((des) => des.slug === "europa")!;
-  } else if (slug[0] === "titan") {
-    return crew.find((des) => des.slug === "titan")!;
+  } else if (slug[0] === "pilot") {
+    return crew.find((des) => des.slug === "pilot")!;
+  } else if (slug[0] === "flight-engineer") {
+    return crew.find((des) => des.slug === "flight-engineer")!;
   } else {
     return false;
   }
@@ -26,33 +27,26 @@ export default function Crew({
 }: {
   params: Record<string, string>;
 }) {
-  const crew = findCrew(params);
-  if (crew === false) {
-    console.log("redirect called");
+  const crewMember = findCrew(params);
+  if (crewMember === false) {
     redirect("/crew");
   }
 
   return (
-    <section>
-      <section>
-        <Image src={crew.image}  width={1000} height={1000} alt="" />
-      </section>
-      <section className="border-2">
-        <Nav />
-        <h1>{crew.name}</h1>
-        <p>{crew.bio}</p>
-        {/* <hr />   probably use a <div> instead */}
-        <div>
-          <div>
-            <p>avg. distance</p>
-            <p>{crew.role}</p>
+    <section className="w-full h-full flex flex-col gap-8 justify-between">
+      <section className="w-full flex flex-col gap-6 pt-10 h-full justify-between">
+        <section className="flex flex-col gap-6">
+          <div className="flex flex-col-reverse items-center gap-2 uppercase">
+            <h1 className={`text-2xl text-white ${bellefair.className}`}>{crewMember.name}</h1>
+            <h2 className={`text-lg text-white/50 ${bellefair.className}`}>{crewMember.role}</h2>
           </div>
-          <div>
-            <p></p>
-            <p></p>
-          </div>
-        </div>
+          <p className="text-[0.94rem] text-center leading-[180%]">{crewMember.bio}</p>
+        </section>
+        <Nav selectedCrewSlug={crewMember.slug} />
+      </section >
+      <section className="w-full flex justify-center items-center border2  p-1">
+        <Image src={crewMember.image} width={1600} height={2400} alt="" className="w-[17rem] h-[17rem] object-contain" />
       </section>
-    </section>
+    </section >
   );
 }
