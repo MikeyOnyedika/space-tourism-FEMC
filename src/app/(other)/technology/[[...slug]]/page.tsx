@@ -39,8 +39,8 @@ export default function Technology({
   }
   const [tech, imageStyle] = item;
   return (
-    <section className="w-full h-full flex flex-col gap-8 pb-6">
-      <section className="h-full">
+    <section className="w-full h-fit flex flex-col gap-8 pb-6">
+      <section className="pt-16 h-full">
         <picture>
           <source srcSet={tech.image2} media="(max-width: 767.9px)" />
           <source srcSet={tech.image1} media="(min-width: 768px)" />

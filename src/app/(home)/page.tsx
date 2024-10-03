@@ -13,7 +13,9 @@ export default function Home() {
         </p>
       </section>
       <section className="flex justify-center items-center h-full w-full">
-        <Link href="/destination" className={`bg-white text-blue-900 w-36 h-36 rounded-full flex justify-center items-center uppercase text-lg  ${bellefair.className}`}>explore</Link>
+        <Link href="/destination" className={`flex w-fit h-fit  border-[0px] transition-all duration-300 hover:border-clamped hover:border-white/10 rounded-full ${bellefair.className}`}>
+          <span className="bg-white text-blue-900 w-36 h-36 rounded-full flex justify-center items-center uppercase text-lg  hover:border-white/10">explore</span>
+        </Link>
       </section>
     </section>
   )

@@ -41,6 +41,9 @@ const config: Config = {
       screens: {
         "2xl": "1440px",
       },
+      borderWidth: {
+        clamped: "clamp(5px, 23.5vw, 88px)"
+      }
     },
   },
   plugins: [],
