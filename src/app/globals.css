@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer base {
+    .clip {
+        /* clip-path: rect(0 calc(100%-10%) top auto); */
+        clip-path: 20%;
+        /* height: 90%; */
+        /* margin-top: 10%; */
+    }
+
+}

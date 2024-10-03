@@ -81,7 +81,8 @@ export const technology = [
     slug: "launch-vehicle",
     href: "/technology/launch-vehicle",
     name: "Launch vehicle",
-    image: "/assets/technology/image-launch-vehicle-landscape.jpg",
+    image1: "/assets/technology/image-launch-vehicle-portrait.jpg",
+    image2: "/assets/technology/image-launch-vehicle-landscape.jpg",
     description:
       "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
   },
@@ -89,7 +90,8 @@ export const technology = [
     slug: "spaceport",
     href: "/technology/spaceport",
     name: "Spaceport",
-    image: "/assets/technology/image-spaceport-landscape.jpg",
+    image1: "/assets/technology/image-spaceport-portrait.jpg",
+    image2: "/assets/technology/image-spaceport-landscape.jpg",
     description:
       "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
   },
@@ -97,7 +99,8 @@ export const technology = [
     slug: "space-capsule",
     href: "/technology/space-capsule",
     name: "Space capsule",
-    image: "/assets/technology/image-space-capsule-landscape.jpg",
+    image1: "/assets/technology/image-space-capsule-portrait.jpg",
+    image2: "/assets/technology/image-space-capsule-landscape.jpg",
     description:
       "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
   },

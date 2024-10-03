@@ -33,7 +33,7 @@ export default function Crew({
   }
 
   return (
-    <section className="w-full h-full flex flex-col gap-8 justify-between">
+    <section className="w-full h-full flex flex-col gap-8 justify-between pb-6 pr-6 pl-6">
       <section className="w-full flex flex-col gap-6 pt-10 h-full justify-between">
         <section className="flex flex-col gap-6">
           <div className="flex flex-col-reverse items-center gap-2 uppercase">

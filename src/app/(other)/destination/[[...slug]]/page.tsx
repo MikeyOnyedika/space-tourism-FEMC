@@ -33,7 +33,7 @@ export default function Destination({
   }
 
   return (
-    <section className="w-full h-full flex flex-col gap-8">
+    <section className="w-full h-full flex flex-col gap-8 pb-6 pr-6 pl-6">
       {/* destination image */}
       <div className="flex justify-center items-center w-full p-6">
         <Image src={destination.image} width={1000} height={1000} alt="" className="w-[9.38rem] aspect-square" />
