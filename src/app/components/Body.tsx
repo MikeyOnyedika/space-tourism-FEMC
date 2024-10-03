@@ -3,27 +3,28 @@ import { usePathname } from "next/navigation";
 import RootHeader from "./RootHeader";
 import { barlow } from "../font";
 import { ReactNode } from "react";
+import { getBasePage } from "../utils";
 
 function getBackgroundImage(pathname: string): string {
-  if (pathname === "/") {
-    return "bg-home md:bg-home-tablet 2xl:bg-home-desktop";
+  const page = getBasePage(pathname);
+  if (!page) { return "" }
+
+  switch (page.slug) {
+    case "home":
+      return "bg-home md:bg-home-tablet 2xl:bg-home-desktop";
+    case "destination":
+      return "bg-destination md:bg-destination-tablet 2xl:bg-destination-desktop";
+    case "crew":
+      return "bg-crew md:bg-crew-tablet 2xl:bg-crew-desktop";
+    case "technology":
+      return "bg-technology md:bg-technology-tablet 2xl:bg-technology-desktop";
+    default:
+      return ""
   }
-  if (pathname.startsWith("/destination")) {
-    return "bg-destination md:bg-destination-tablet 2xl:bg-destination-desktop";
-  }
-  if (pathname.startsWith("/crew")) {
-    return "bg-crew md:bg-crew-tablet 2xl:bg-crew-desktop";
-  }
-  if (pathname.startsWith("/technology")) {
-    return "bg-technology md:bg-technology-tablet 2xl:bg-technology-desktop";
-  }
-  // TODO: watchout in case this hides an error.
-  return "";
 }
 
 export default function Body({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  console.log("pathname: ", pathname);
   return (
     <body
       className={`text-blue-300 flex flex-col h-screen w-screen bg-blue-300 bg-cover bg-no-repeat 

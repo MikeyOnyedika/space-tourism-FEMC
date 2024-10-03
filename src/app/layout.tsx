@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Body from "./components/Body";
+import Navigation from "./components/Navigation";
+import GlobalStateProvider from "./contexts/GlobalStateProvider";
 
 export const metadata: Metadata = {
   title: "Space Tourism",
@@ -14,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Body>{children}</Body>
-    </html>
+      <GlobalStateProvider>
+        <Body>
+          <Navigation />
+          {children}
+        </Body>
+      </GlobalStateProvider>
+    </html >
   );
 }

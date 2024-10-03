@@ -1,3 +1,10 @@
+export const navLinks = [
+  { href: "/", id: "00", slug: "home", title: "" },
+  { href: "/destination", id: "01", slug: "destination", title: "pick your destination" },
+  { href: "/crew", id: "02", slug: "crew", title: "meet your crew" },
+  { href: "/technology", id: "03", slug: "technology", title: "space launch 101" },
+];
+
 export const destinations = [
   {
     slug: "moon",

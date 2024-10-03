@@ -28,7 +28,7 @@ function findTechnologyAndStyle(
   }
 }
 
-export default function Crew({
+export default function Technology({
   params,
 }: {
   params: Record<string, string>;
