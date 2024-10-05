@@ -40,6 +40,7 @@ const config: Config = {
     extend: {
       screens: {
         "2xl": "1440px",
+        "3xl": "1920px",
       },
       outlineWidth: {
         clamped: "clamp(0px, 23.5vw, 88px)"
