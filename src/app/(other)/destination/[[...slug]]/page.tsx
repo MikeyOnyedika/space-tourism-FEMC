@@ -33,32 +33,32 @@ export default function Destination({
   }
 
   return (
-    <section className="w-full h-full flex flex-col gap-8 pb-6 pr-6 pl-6">
+    <section className="w-full h-full flex flex-col items-center gap-8 pb-6 pr-6 pl-6 md:pb-10 md:pr-10 md:pl-10">
       {/* destination image */}
-      <div className="flex justify-center items-center w-full p-6">
-        <Image src={destination.image} width={1000} height={1000} alt="" className="w-[9.38rem] aspect-square" />
+      <div className="flex justify-center items-center w-full p-6 md:h-full md:w-full">
+        <Image src={destination.image} width={1000} height={1000} alt="" className="w-[9.38rem] md:w-[18.75rem] aspect-square" />
       </div>
-      <section className="flex flex-col items-center w-full gap-6">
+      <section className="flex flex-col items-center w-full gap-6 max-w-[32.13rem]">
         {/* destination navigation */}
         <Nav selectedNavSlug={destination.slug} />
         {/* explanation */}
         <div className="flex flex-col gap-4">
-          <h1 className={`text-white text-[3.5rem] uppercase text-center ${bellefair.className}`}>{destination.title}</h1>
-          <p className="text-[0.94rem] leading-[180%] text-center">{destination.description}</p>
+          <h1 className={`text-white text-[3.5rem] md:text-[5rem] uppercase text-center ${bellefair.className}`}>{destination.title}</h1>
+          <p className="text-[0.94rem] md:text-base leading-[180%] md:leading-[180%]  text-center">{destination.description}</p>
         </div>
         <div className="h-[1px] w-full bg-white/25"></div>
         {/* statistics */}
-        <div className="flex flex-col gap-6 uppercase">
-          <div className="flex flex-col gap-3 text-center">
+        <div className="flex flex-col md:flex-row md:w-full gap-6 uppercase">
+          <div className="flex flex-col gap-3 text-center md:w-full">
             <p className={`text-sm tracking-[2px] ${barlowCondensed.className}`}>avg. distance</p>
             <p className={`text-white text-[1.75rem] ${bellefair.className}`}>{destination.avgDistance}</p>
           </div>
-          <div className="flex flex-col gap-3 text-center">
+          <div className="flex flex-col gap-3 text-center md:w-full">
             <p className={`text-sm tracking-[2px] ${barlowCondensed.className}`}>est. travel time</p>
             <p className={`text-white text-[1.75rem] ${bellefair.className}`}>{destination.estTravelTime}</p>
           </div>
         </div>
       </section>
-    </section >
+    </section>
   );
 }
