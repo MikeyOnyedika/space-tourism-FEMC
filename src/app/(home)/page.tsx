@@ -12,7 +12,7 @@ export default function Home() {
           Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
         </p>
       </section>
-      <section className="flex justify-center items-center h-fit w-full max-w-[32rem]">
+      <section className="flex justify-center items-center h-full w-full max-w-[32rem]">
         <Link href="/destination" className={`flex w-fit h-fit  border-[0px] transition-all duration-300 hover:border-clamped hover:border-white/10 rounded-full ${bellefair.className}`}>
           <span className="bg-white text-blue-900 w-36 h-36 md:w-[17rem] md:h-[17rem] rounded-full flex justify-center items-center uppercase text-lg md:text-[2rem] transition-all duration-300  hover:border-white/10 hover:text-blue-900/50">explore</span>
         </Link>
