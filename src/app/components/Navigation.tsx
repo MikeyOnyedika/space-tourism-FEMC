@@ -32,6 +32,6 @@ export default function Navigation() {
           </li>
         ))}
       </ul>
-    </nav >
+    </nav>
   )
 }
