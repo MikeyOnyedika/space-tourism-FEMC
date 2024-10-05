@@ -33,7 +33,7 @@ export default function Technology({
     <section className="w-full h-fit flex flex-col items-center  gap-8 pb-6 md:pb-10">
       <section className="pt-16 h-full w-full">
         <div className="flex justify-center w-full h-[258px] md:h-[356px] md:max-w-[768px] md:m-auto relative overflow-hidden">
-          <picture>
+          <picture className="flex w-full h-full">
             {/* image3 is for desktop view */}
             <source srcSet={tech.image3} media="(min-width: 1440px)" />
             {/* image2 is for tablet view */}
