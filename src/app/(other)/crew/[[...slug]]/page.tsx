@@ -33,20 +33,20 @@ export default function Crew({
   }
 
   return (
-    <section className="w-full h-full flex flex-col gap-8 justify-between pb-6 pr-6 pl-6">
-      <section className="w-full flex flex-col gap-6 pt-10 h-full justify-between">
+    <section className="w-full h-full flex flex-col items-center gap-8 justify-between pb-6 md:pb-10 pr-6 md:pr-10 pl-6 md:pl-10">
+      <section className="w-full flex flex-col gap-6 pt-10 h-full justify-between max-w-[32rem]">
         <section className="flex flex-col gap-6">
-          <div className="flex flex-col-reverse items-center gap-2 uppercase">
-            <h1 className={`text-2xl text-white ${bellefair.className}`}>{crewMember.name}</h1>
-            <h2 className={`text-lg text-white/50 ${bellefair.className}`}>{crewMember.role}</h2>
+          <div className="flex flex-col-reverse items-center gap-2 md:gap-4 uppercase">
+            <h1 className={`text-2xl md:text-[2.5rem] text-white ${bellefair.className}`}>{crewMember.name}</h1>
+            <h2 className={`text-lg md:text-2xl text-white/50 ${bellefair.className}`}>{crewMember.role}</h2>
           </div>
-          <p className="text-[0.94rem] text-center leading-[180%]">{crewMember.bio}</p>
+          <p className="text-center text-[0.94rem] md:text-base  leading-[180%] md:leading-[180%] md:min-h-[7.2em] ">{crewMember.bio}</p>
         </section>
         <Nav selectedCrewSlug={crewMember.slug} />
-      </section >
-      <section className="w-full flex justify-center items-center border2  p-1">
-        <Image src={crewMember.image} width={1600} height={2400} alt="" className="w-[17rem] h-[17rem] object-contain" />
       </section>
-    </section >
+      <section className="w-full flex justify-center items-center border2  p-1">
+        <Image src={crewMember.image} width={1600} height={2400} alt="" className="w-[17rem] h-[17rem] md:w-[28.9rem] md:h-[35rem] object-contain" />
+      </section>
+    </section>
   );
 }
