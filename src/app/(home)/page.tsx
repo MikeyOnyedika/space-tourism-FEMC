@@ -14,8 +14,8 @@ export default function Home() {
       </section>
       <section className="flex justify-center items-center h-full w-full max-w-[32rem] 2xl:max-w-[33.8rem] 2xl:h-fit 2xl:items-end 2xl:justify-end 2xl:py-9">
         <div className="flex justify-center items-center h-full w-full 2xl:justify-end">
-          <Link href="/destination" className={`flex w-fit h-fit  border-[0px] transition-all duration-300 hover:border-clamped hover:border-white/10 rounded-full ${bellefair.className}`}>
-            <span className="bg-white text-blue-900 w-36 h-36 md:w-[17rem] md:h-[17rem] rounded-full flex justify-center items-center uppercase text-lg md:text-[2rem] transition-all duration-300  hover:border-white/10 hover:text-blue-900/50">explore</span>
+          <Link href="/destination" className={`flex w-fit h-fit   transition-all duration-300 outline  hover:outline-clamped hover:outline-white/10 rounded-full ${bellefair.className}`}>
+            <span className="bg-white text-blue-900 w-36 h-36 md:w-[17rem] md:h-[17rem] rounded-full flex justify-center items-center uppercase text-lg md:text-[2rem] transition-all duration-300 outline  hover:outline-white/10 hover:text-blue-900/50">explore</span>
           </Link>
         </div>
       </section>
